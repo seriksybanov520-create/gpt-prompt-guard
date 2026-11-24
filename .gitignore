@@ -1,0 +1,15 @@
+# Binaries and build artifacts
+/gpt-prompt-guard
+*.exe
+*.out
+*.test
+coverage.txt
+
+# Local private rulepacks (never commit private production signatures)
+*private*rulepack*.json
+*.local.json
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/

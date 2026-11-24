@@ -1,0 +1,32 @@
+{
+  "version": "example-private-rulepack-v1",
+  "rules": [
+    {
+      "category": "org_internal_canary",
+      "score": 8,
+      "patterns": [
+        "internal-org-secret-canary-token"
+      ]
+    }
+  ],
+  "composite_rules": [
+    {
+      "category": "custom_policy_override",
+      "score": 15,
+      "reason": "custom_operator_override_signature",
+      "mandatory": true,
+      "any_of": [
+        [
+          "custom workspace override",
+          "disable all organization guardrails"
+        ]
+      ]
+    }
+  ],
+  "extra_block_patterns": [
+    "example-emergency-killswitch-phrase"
+  ],
+  "allowlist": [
+    "internal-approved-redteam-tag"
+  ]
+}
